@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['local', '8000-emarnus-pp4-cue3olucydt.ws-eu100.gitpod.io', 'bar-match-bookings-site-929e26b7b02a.herokuapp.com']
+ALLOWED_HOSTS = ['local', '8000-emarnus-pp4-cue3olucydt.ws-eu100.gitpod.io', 'bar-match-bookings-site-929e26b7b02a.herokuapp.com','8000-emarnus-pp4-cue3olucydt.ws-eu101.gitpod.io']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'cloudinary_storage',
+    'django_summernote',
     'django.contrib.staticfiles',
     'cloudinary',
     'website',
