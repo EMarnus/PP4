@@ -19,5 +19,21 @@ class User(models.Model):
     def __str__(self):
         return self.title
 
+
+class Event(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="game_events"
+    )
+    featured_image = CloudinaryField('image', default='placeholder')
+    updated_on = models.DateTimeField(auto_now=True)
+    event_date = models.DateTimeField()
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+
     class Meta:
-        ordering = ["created_on"]
+        ordering = ["-event_date"]
+
+    def __str__(self):
+        return self.title
