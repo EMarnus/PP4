@@ -5,6 +5,6 @@ from .models import Event
 
 class PostList(generic.ListView):
     model = Event
-    queryset = Post.object.order_by(event_date)
+    queryset = Event.objects.order_by()  # Figure out why not working
     template_name = 'index.html'
     paginate_by = 6

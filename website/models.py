@@ -26,11 +26,10 @@ class Event(models.Model):
         User, on_delete=models.CASCADE, related_name="game_events"
     )
     featured_image = CloudinaryField('image', default='placeholder')
-    updated_on = models.DateTimeField(auto_now=True)
-    event_date = models.DateTimeField()
+    updated_on = models.DateTimeField()
+    event_date = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-
 
     class Meta:
         ordering = ["-event_date"]
