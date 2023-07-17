@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['local', '8000-emarnus-pp4-cue3olucydt.ws-eu100.gitpod.io', 'bar-match-bookings-site-929e26b7b02a.herokuapp.com','8000-emarnus-pp4-cue3olucydt.ws-eu101.gitpod.io']
+ALLOWED_HOSTS = ['local', '8000-emarnus-pp4-1h6pgm8oxpi.ws-eu101.gitpod.io', 'bar-match-bookings-site-929e26b7b02a.herokuapp.com','8000-emarnus-pp4-cue3olucydt.ws-eu101.gitpod.io']
 
 
 # Application definition
@@ -102,7 +102,6 @@ WSGI_APPLICATION = 'gamecalendar.wsgi.application'
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
 
 
 # Password validation
